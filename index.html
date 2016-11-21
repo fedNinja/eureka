@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		thinkful capstone project
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+	<div class="wrapper"> 
+		<nav class="navbar">
+			<h1 class="logo">Eureka</h1>
+			<ul>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Signup</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="container">
+				<input type="text" name="searchK" class="inputText" placeholder="Search keyword" id="inputVal">
+				<input type="text" name="searchP" class="inputText" placeholder="Search Place" id="inputValPlace">
+				<button type="submit" id="search" class="button-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+			</div>
+			<div id="listEvents">
+				<div class="eventDesc" id="event1"></div>
+				<div class="eventDesc" id="event2"></div>
+				<div class="eventDesc" id="event3"></div>
+				<div class="eventDesc" id="event4"></div>
+				<div class="eventDesc" id="event5"></div>
+				<button class="btnNP" id="goHome">Home</button>
+				<button class="btnNP" id="goPrev">Previous</button>
+				<button class="btnNP" id="goNext">Next</button>
+			</div>
+			<div class="errorDiv"></div>
+			<div id="map" style="display:none;">
+			</div>
+		</div>
+	</main>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC67VN01pF0or8Xdxk5uzuc3xVaKT8Z1zc&libraries=places"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
