@@ -14,7 +14,7 @@ var displayData = function(data){
 			var eTime=convertDateTime(item.time);
 			console.log("time is "+eTime);
 			$('#event'+[index+1]).append('<div class="inlineDiv left"><p>'+eTime[0]+'</p><p>'+eTime[1]+'</p></div><div class="inlineDiv top"><a href="'+item.event_url+'"><span>'+item.group.name+'</span></a><p><a href="'+item.event_url+'"><span>'+item.name+'<span></a></p></div>');
-			
+
 		});
 	}
 }
@@ -54,7 +54,7 @@ $('#goHome').click(function(e){
 });
 
 $('#goNext').click(function(e){
-
+	console.log("Inside next function");
 
 });
 
@@ -70,7 +70,7 @@ $(function(){
 
 	google.maps.event.addDomListener(window, 'load', init);
 
-	
+
 
 	$('#search').click(function(e){
 		e.preventDefault();
@@ -97,7 +97,7 @@ $(function(){
 				success:function(data){
 					console.log(data);
 					displayData(data);
-					
+
 				},
 				error:function(){
 					console.log("Sorry, data not found");
