@@ -9,9 +9,6 @@ body,html{
 	height:100%;
 	font-family: sans-serif;
 }
-.container{
-	height:100%;
-}
 
 .bg-image{
 	height:100%;
@@ -84,7 +81,7 @@ ul li a{
 	background-color: transparent;
 }
 
-#listEvents,.errorDiv{
+#listEvents{
 	display:none;
 	width: 80%;
 	height: 65%;
@@ -174,5 +171,13 @@ a{
 
 .fa-2x {
     color: #ffffff;
-    }
+}
 
+.errorDisplay{
+	padding-top:20px;
+	color:#fff;
+}
+
+.hidden{
+	display:none;
+}
