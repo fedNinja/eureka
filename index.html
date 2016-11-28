@@ -20,6 +20,7 @@
 				<input type="text" name="searchK" class="inputText" placeholder="Search keyword" id="inputVal">
 				<input type="text" name="searchP" class="inputText" placeholder="Search Place" id="inputValPlace">
 				<button type="submit" id="search" class="button-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+				<p class="errorDisplay"><span id="errorMsg" class="hidden"></span></p>
 			</form>
 			<div id="listEvents">
 				<div class="eventContainer"></div>
@@ -27,7 +28,6 @@
 				<button class="btnNP" id="goPrev">Previous</button>
 				<button class="btnNP" id="goNext">Next</button>
 			</div>
-			<div class="errorDiv"></div>
 			<div id="detailsContainer" class="detailsEvent" style="display:none;">
 				<h1 class="eventTitle"></h1>
 				<div class="eventInfo">

@@ -4,13 +4,13 @@ var pageCnt, totalNumOfPages, arr=[];
 
 
 var initialize = function(data){
-	if (!data.meta) {
-		$('#listEvents').hide();
-		$('.errorDiv').append('<div class="top"><span>'+data.details+'</span></div>');
-		$('.errorDiv').show();
-		
+	if (data.results.length==0) {
+		$('#errorMsg').removeClass('hidden');
+		$('#errorMsg').append("No results found");
+			
 		} 
 	else{
+		$('#errorMsg').addClass('hidden');
 		$('.app-form').hide();
 		$('#listEvents').show();
 		totalNumOfPages= Math.ceil((data.results.length)/5);
@@ -81,7 +81,7 @@ $('.navbar').on('click','.goHome',function(e){
 	$('#detailsContainer').hide();
 });
 
- function initMap(newlat,newlon) {
+ function initMap(newlat,newlon){
         var uluru = {lat: newlat, lng: newlon};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
@@ -148,7 +148,7 @@ $('#goPrev').click(function(e){
 
 $(function(){
 
-	function init() {
+	function init(){
 		var input = document.getElementById('inputValPlace');
 		var autocomplete = new google.maps.places.Autocomplete(input);
 	}
