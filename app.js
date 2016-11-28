@@ -33,8 +33,17 @@ var displayData = function(data, pageCnt){
 			});
 	}
 
+	var clearAll= function(){
+	$('.eventTitle').html("");
+	$('.when').html("");
+	$('.rsvp').html("");
+	$('.where').html("");
+	$('#details').html("");
+	}
+
 
 $('.eventContainer').on('click', '.descClass',function(e){
+	clearAll();
 	e.preventDefault();
 	var displayedItem, displayedId;
 	displayedId= this.id;
@@ -46,6 +55,7 @@ $('.eventContainer').on('click', '.descClass',function(e){
 			displayedItem=item;
 			}
 	});
+	$('#detailsContainer').show();
 	var eventTime=convertDateTime(displayedItem.time);
 	$('.eventTitle').append(displayedItem.name);
 	$('.when').html("When: "+ eventTime);
@@ -68,8 +78,7 @@ $('.navbar').on('click','.goHome',function(e){
 	$('#listEvents').hide();
 	$('.app-form').show();
 	$('.eventContainer').html("");
-	$('.detailsContainer').html("");
-	$('.detailsContainer').hide();
+	$('#detailsContainer').hide();
 });
 
  function initMap(newlat,newlon) {
@@ -82,6 +91,7 @@ $('.navbar').on('click','.goHome',function(e){
           position: uluru,
           map: map
         });
+        $('#map').show();
       }
 
 
@@ -117,14 +127,9 @@ $('#goNext').click(function(e){
 	pageCnt++;
 	$('.eventContainer').html("");
 	$('#goPrev').prop("disabled", false);
-	/*$('#goNext').css('background-color','#2ECC71');
-	$('#goNext').css('border-color','#2ECC71');*/
 	if(pageCnt == totalNumOfPages) {
-		console.log("I am hereeeee..........");
 		$('#goNext').prop("disabled", true);
-		/*$('#goNext').css('background-color','none');
-		$('#goNext').css('border-color','none');*/
-		}
+			}
 	displayData(arr, pageCnt);
 });
 
@@ -132,10 +137,7 @@ $('#goPrev').click(function(e){
 	pageCnt--;
 	$('.eventContainer').html("");
 	$('#goNext').prop("disabled", false);
-	/*$('#goNext').css('background-color','#2ECC71');
-	$('#goNext').css('border-color','#2ECC71');*/
 	if(pageCnt == 1) {
-		console.log("I am hereeeee..........");
 		$('#goPrev').prop("disabled", true);
 	}
 	displayData(arr, pageCnt);

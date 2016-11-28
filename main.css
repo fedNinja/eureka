@@ -9,6 +9,9 @@ body,html{
 	height:100%;
 	font-family: sans-serif;
 }
+.container{
+	height:100%;
+}
 
 .bg-image{
 	height:100%;
@@ -162,12 +165,14 @@ a{
 
 .detailContainer{
 	width: 100%;
-	height:70%;
+	height:50%;
     text-align: center;
     overflow: auto;
     margin-top: 50px;
-        padding-top: 40px;
+    padding-top: 40px;
 }
 
-
+.fa-2x {
+    color: #ffffff;
+    }
 
