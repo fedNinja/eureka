@@ -9,38 +9,38 @@
 
 </head>
 <body>
-	<div class="wrapper"> 
-		<nav class="navbar">
-			<h1 class="logo">Eureka</h1>
-			<ul>
-				<li><a href="#">Login</a></li>
-				<li><a href="#">Signup</a></li>
-			</ul>
+	<div class="bg-image">
+	</div>
+	<nav class="navbar">
+		<a href="#" class="goHome"><h1 class="logo">Eureka</h1></a>
+		<h4 class="tagLine">Finding like minded people made easy....<h4>
 		</nav>
-		<main>
-			<div class="container">
+		<main class="container">
+			<form class="app-form">	
 				<input type="text" name="searchK" class="inputText" placeholder="Search keyword" id="inputVal">
 				<input type="text" name="searchP" class="inputText" placeholder="Search Place" id="inputValPlace">
 				<button type="submit" id="search" class="button-search"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
-			</div>
+			</form>
 			<div id="listEvents">
-				<div class="eventDesc" id="event1"></div>
-				<div class="eventDesc" id="event2"></div>
-				<div class="eventDesc" id="event3"></div>
-				<div class="eventDesc" id="event4"></div>
-				<div class="eventDesc" id="event5"></div>
+				<div class="eventContainer"></div>
 				<button class="btnNP" id="goHome">Home</button>
 				<button class="btnNP" id="goPrev">Previous</button>
 				<button class="btnNP" id="goNext">Next</button>
 			</div>
 			<div class="errorDiv"></div>
-			<div id="map" style="display:none;">
+			<div id="detailsContainer" class="detailsEvent" style="display:none;">
+				<h1 class="eventTitle"></h1>
+				<div class="eventInfo">
+					<h5 class="when padTop"></h5>
+					<h5 class="where padTop"></h5>
+					<h5 class="rsvp padTop"></h5>
+				</div>
+				<div id="map" class="mapContainer"></div>
+				<div id="details" class="detailContainer"></div>
 			</div>
-		</div>
-	</main>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC67VN01pF0or8Xdxk5uzuc3xVaKT8Z1zc&libraries=places"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="app.js"></script>
-</body>
-</html>
+		</main>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC67VN01pF0or8Xdxk5uzuc3xVaKT8Z1zc&libraries=places"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+	</html>
