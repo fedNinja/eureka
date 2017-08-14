@@ -13,7 +13,7 @@ body,html{
 .bg-image{
 	height:100%;
 	width:100%;
-	background:url('images/meet_home1.jpg') no-repeat center center fixed; 
+	background:url('images/meet_home1.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -77,8 +77,14 @@ ul li a{
 }
 
 .button-search{
-	border:0;
-	background-color: transparent;
+	border: 0;
+  background-color: #4c577d;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.button-search:hover {
+  background-color: #1c2f73;
 }
 
 #listEvents{

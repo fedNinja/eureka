@@ -6,9 +6,9 @@ var pageCnt, totalNumOfPages, arr=[];
 var initialize = function(data){
 	if (data.results.length==0) {
 		$('#errorMsg').removeClass('hidden');
-		$('#errorMsg').append("No results found");
-			
-		} 
+		$('#errorMsg').text("No results found");
+
+		}
 	else{
 		$('#errorMsg').addClass('hidden');
 		$('.app-form').hide();
@@ -69,7 +69,7 @@ $('.eventContainer').on('click', '.descClass',function(e){
 		$('.where').html("Where: remote");
 	}
 	$('#details').append(displayedItem.description);
-	
+
 
 });
 
@@ -102,7 +102,7 @@ var convertDateTime = function(u_time){
 var period;
 var hours = date.getHours();
 if (hours>12){hours= (hours-12);
-	period= "PM";} 
+	period= "PM";}
 	else{ hours=hours;
 		period= "AM";}
 // Minutes part from the timestamp
@@ -159,15 +159,15 @@ $(function(){
 		e.preventDefault();
 		var value=$('#inputVal').val();
 		var place=$('#inputValPlace').val();
-		var arr= place.split(", "); 
+		var arr= place.split(", ");
 			$.ajax({
 				dataType:'jsonP',
 				url: url,
 				type:'GET',
 				data: {
 					key: '1736634714527352a143e6011107e7f',
-					sign: true, 
-					host: 'public',		
+					sign: true,
+					host: 'public',
 					country: "US",
 					topic: value,
 					city: arr[0],
@@ -181,9 +181,7 @@ $(function(){
 					console.log("Sorry, data not found");
 				}
 			});
-			
+
 
 		});
 });
-
-
