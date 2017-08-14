@@ -135,6 +135,11 @@ a{
 	border:none;
 }
 
+.btnNP:hover {
+  background-color: #1c2f73;
+	color: #fff;
+}
+
 .detailsEvent{
 	width: 80%;
 	height: 65%;
