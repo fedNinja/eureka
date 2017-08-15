@@ -1,0 +1,24 @@
+{
+  "name": "eureka",
+  "version": "1.0.0",
+  "description": "##Description: This application is demonstartion of consuming Meetup API(only events in the US). It is also consuming google API(both autocomplete for places and google map API to display the place of the event). In case of remote event, map is not displayed. For this project, I used JQUERY, HTML5 and CSS3.",
+  "main": "app.js",
+  "scripts": {
+  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedNinja/eureka.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedNinja/eureka/issues"
+  },
+  "homepage": "https://github.com/fedNinja/eureka#readme",
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}
